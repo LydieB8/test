@@ -1,0 +1,417 @@
+/*SOMMAIRE
+-------------------------------------------------------
+1. MISE EN PAGE GÉNÉRALE 
+2. PARTIE DROITE (MAIN)
+3. PARTIE GAUCHE (ASIDE)
+4. RESPONSIVE DESIGN
+*/
+
+/*1.MISE EN PAGE GÉNÉRALE
+----------------------------------------------------*/
+*
+{
+	box-sizing:border-box;
+}
+
+body
+{
+	font-family:  'Oranienbaum', serif;
+	color: #424242;
+	font-weight: 200;
+	padding: 0;
+	margin: 0;
+}
+
+.container
+{
+	display:flex;
+	flex-direction: row-reverse;
+}
+
+/*Titres*/
+.title
+{
+	margin: 0 0 120px 55px;
+}
+
+hr
+{
+	border: 1px solid #7E57C2;
+	width:9%;
+	margin: 0px;
+}
+
+h1
+{
+	font-size: 3.5em;
+	font-weight:300;
+}
+
+h1 span
+{
+	color: #7E57C2;
+}
+
+h2
+{
+	font-size: 2.5em;
+	text-transform: capitalize;
+	font-weight: 200;
+}
+
+h3
+{
+	font-size: 2em;
+	text-transform: uppercase;
+	font-weight: 500;
+	border-bottom: 2px solid #7E57C2;
+	padding-bottom: 15px;
+}
+
+h4
+{
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-bottom: 0px;
+}
+
+/*Main partie droite*/
+main
+{
+	flex: 2;
+	padding: 0 40px 0 50px;
+}
+
+main img
+{
+	display: none;
+}
+
+ul
+{
+	display: flex;
+	flex-direction:column;
+}
+
+li
+{
+	display: flex;
+	list-style: none;
+}
+
+.fas, .far
+{
+	color: #7E57C2;
+	font-size: 0.7em;
+	margin-right: 30px;
+}
+
+.date
+{
+	flex: 1;
+}
+
+.date i
+{
+	margin-right: 8px;
+}
+
+.date p:nth-child(2)
+{
+	margin: -10px 0 0 9px;
+}
+
+.party_right_text
+{
+	display: flex;
+	flex-direction: column;
+	flex: 2;
+}
+
+.party_right_text p
+{
+	margin-bottom: 0px;
+}
+
+.recommandations
+{
+	display: flex;
+	justify-content: space-around;
+	line-height: 5px;
+}
+
+.primary_section .seconde_section
+{
+	display: flex;
+}
+
+.recommandations div p:nth-child(1)
+{
+	font-weight: bold;
+}
+
+.recommandations div p:nth-child(4)
+{
+	font-style: italic;
+}
+
+/*Aside partie gauche*/
+aside
+{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	background-color:#7E57C2;
+	padding-top:50px;
+	color:#FFF;
+	text-align: justify;
+}
+
+aside img
+{
+	border: 5px solid #7657c2;
+	display: flex;
+	margin:auto;
+	margin-top:20px;
+	margin-bottom: 20px;
+	border-radius: 300px;
+}
+
+aside h3
+{
+	background-color: #424242;
+	text-align: center;
+	padding: 7px;
+}
+
+adress
+{
+	margin-left: 30px;
+}
+
+adress a
+{
+	color:#fff;
+}
+
+aside a
+{
+	text-decoration: none;
+}
+
+aside a:hover
+{
+	border-bottom: 2px solid #fff;
+}
+
+aside .moi p
+{
+	text-align: justify;
+	line-height: 30px;
+	letter-spacing: 1px;
+	margin: 10px 20px 10px 20px;
+}
+
+.aside_loisirs
+{
+	margin-top: 123%;
+}
+
+aside .fas
+{
+	font-size: 3em;
+	color: #FFF;
+	background: #7E57C2;
+	border-radius: 50%;
+	width: 72px;
+	height: 72px;
+	border: 2px solid #c7b0f2;
+	padding: 10px 0 10px 0;
+}
+
+.aside_loisirs_icons
+{
+	text-align: center;
+	display: flex;
+	justify-content: space-around;
+	margin: 0 15px 15px 0;
+}
+
+/*4. RESPONSIVE DESIGN*/
+/*Tablettes*/
+@media screen and (min-width: 768px) and (max-width: 1023px)
+{
+	main img
+	{
+		display:none;
+	}
+
+	h2
+	{
+		font-size: 2em;
+	}
+
+	hr
+	{
+		width: 18%;
+	}
+
+	aside img
+	{
+		margin-right: -10px;
+	}
+
+	aside h3
+	{
+		font-size: 1.5em;
+	}
+
+	main ul
+	{
+		margin-left: -30px;
+	}
+
+	adress
+	{
+		text-align: center;
+	}
+
+	.moi p
+	{
+		padding-left: 35px;
+	}
+
+	.aside_loisirs
+	{
+		margin-top: 300%;
+	}
+
+	.aside_loisirs_icons
+	{
+		display: flex;
+		margin-right:-29px ;
+	}
+}
+
+/*mobile*/
+@media screen and (max-width: 425px)
+{
+	.container
+	{
+		display:flex;
+		flex-direction: column;
+	}
+
+	aside img
+	{
+		display: none;
+	}
+
+	main img
+	{
+		border: 3px solid #7657c2;
+		display: flex;
+		margin: auto;
+		border-radius: 300px;
+	}
+
+	.title
+	{
+		text-align: center;
+		margin-left: 0px;
+		margin-bottom: 10%;
+	}
+
+	h1 h2
+	{
+		font-size: 2.5em;
+		font-weight:300;
+	}
+
+	h3
+	{
+		font-size: 1.1em;
+	}
+
+	hr
+	{
+		border: 1px solid #7E57C2;
+		width:50%;
+		margin: auto;
+	}
+
+	li
+	{
+		display: flex;
+		flex-direction: column;
+		box-shadow: 0px 0px 10px 0px #9e70ee;
+		padding: 10px;
+		margin-bottom: 15px;
+		border-radius:7px;
+		margin-left: -30px;
+		text-align: center;
+	}
+
+	.date
+	{
+		display: block ruby;
+	}
+
+	h4
+	{
+		margin-top: 2%;
+		font-size: 1.4em;
+	}
+
+	.party_right_text p
+	{
+		margin-bottom: 0px;
+		font-size: 1em;
+		letter-spacing: 1px;
+	}
+
+	.recommandations
+	{
+		line-height: 1px;
+		font-size: 0.7em;
+		margin: 0 0 15px 0;
+	}
+
+	.primary_section
+	{
+		margin-top: -5%;
+		display: flex;
+		flex-direction: column;
+		flex:1;
+	}
+
+	.seconde_section
+	{
+		margin-top: -5%;
+		display: flex;
+		flex-direction: column;
+		flex: 2;
+		margin-left: 8px;
+	}
+
+	aside
+	{
+		margin-top: 2%;
+	}
+
+	aside h3:nth-child(2)
+	{
+		margin-top: -26%;
+	}
+
+	adress
+	{
+		text-align: center;
+	}
+
+	.aside_loisirs
+	{
+		margin: 0 -20px 12px 6px;
+	}
+}
